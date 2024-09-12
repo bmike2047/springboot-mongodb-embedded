@@ -1,8 +1,7 @@
 Spring Boot MongoDB embedded 
 --
 ![](assets/images/logo3.png)
-### Code repository
-<a href="https://github.com/bmike2047/springboot-mongodb-embedded">https://github.com/bmike2047/springboot-mongodb-embedded</a>
+
 ### Description
 This project is an example of using Spring Boot with MongoDB but more particular testing is done using an embedded MongoDB instance instead of docker. <br/>
 It includes a simple data model and repository.<br/>
