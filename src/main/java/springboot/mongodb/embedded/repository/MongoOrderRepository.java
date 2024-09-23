@@ -9,17 +9,24 @@ import springboot.mongodb.embedded.model.Order;
  * Order repository.
  */
 public class MongoOrderRepository implements OrderRepository {
-
+    /**
+     * Mongo template used for mongo operations
+     */
     private final MongoTemplate mongoTemplate;
 
+    /**
+     * Default constructor for order repository.
+     *
+     * @param mongoTemplate mongo template
+     */
     public MongoOrderRepository(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
     }
 
     /**
-     * Here we provide our custom query implementation
+     * Custom query implementation.
      *
-     * @param productId
+     * @param productId product id
      * @return Order
      */
     @Override
