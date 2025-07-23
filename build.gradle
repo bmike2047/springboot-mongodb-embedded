@@ -17,13 +17,19 @@ targetCompatibility = '17'
 
 dependencies {
 
-    implementation 'org.springframework.data:spring-data-mongodb:4.3.2'
+    implementation 'org.springframework.data:spring-data-mongodb'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.mongodb:mongodb-driver-sync:5.1.2'
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo.spring3x:4.16.1'
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
 
+    testCompileOnly("org.projectlombok:lombok:1.18.38")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo.spring3x:4.20.0'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
